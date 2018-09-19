@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AbreastLabelViewController">
+            <connections>
+                <outlet property="contentView" destination="cVZ-iV-hwU" id="jqV-bs-KQ3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVZ-iV-hwU">
+                    <rect key="frame" x="16" y="160" width="343" height="100"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="egN-I2-NsO"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="并排的两个Label，整体靠在左边，宽度根据内容自适应，左侧Label的优先级更高" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2x-DX-xWQ">
+                    <rect key="frame" x="16" y="30" width="343" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="0oU-mZ-c7q"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="StX-qW-pHC">
+                    <rect key="frame" x="16" y="310" width="94" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="fqp-w9-rXf"/>
+                        <constraint firstAttribute="height" constant="30" id="rY8-Eb-03n"/>
+                    </constraints>
+                    <connections>
+                        <action selector="addLabelContent:" destination="-1" eventType="valueChanged" id="z2f-Fd-aLC"/>
+                    </connections>
+                </stepper>
+                <stepper opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="9th-5K-kh8">
+                    <rect key="frame" x="259" y="310" width="94" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="DEq-rd-kHD"/>
+                        <constraint firstAttribute="height" constant="30" id="kXu-Yl-iD0"/>
+                    </constraints>
+                    <connections>
+                        <action selector="addLabelContent:" destination="-1" eventType="valueChanged" id="rBb-k8-Qxf"/>
+                    </connections>
+                </stepper>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailingMargin" secondItem="cVZ-iV-hwU" secondAttribute="trailing" id="54a-jv-PtY"/>
+                <constraint firstItem="B2x-DX-xWQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" constant="10" id="6xa-X7-BZk"/>
+                <constraint firstItem="StX-qW-pHC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="CM5-cD-27A"/>
+                <constraint firstItem="B2x-DX-xWQ" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="RX6-xr-Buz"/>
+                <constraint firstItem="StX-qW-pHC" firstAttribute="top" secondItem="cVZ-iV-hwU" secondAttribute="bottom" constant="50" id="TKA-vy-23h"/>
+                <constraint firstItem="B2x-DX-xWQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="Ypl-Ym-P2E"/>
+                <constraint firstItem="cVZ-iV-hwU" firstAttribute="top" secondItem="B2x-DX-xWQ" secondAttribute="bottom" constant="30" id="dvB-Xw-DzD"/>
+                <constraint firstItem="cVZ-iV-hwU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="juv-oj-bH1"/>
+                <constraint firstItem="9th-5K-kh8" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="wrg-EO-xxO"/>
+                <constraint firstItem="9th-5K-kh8" firstAttribute="top" secondItem="cVZ-iV-hwU" secondAttribute="bottom" constant="50" id="xuC-ef-KYo"/>
+            </constraints>
+            <point key="canvasLocation" x="47" y="57"/>
+        </view>
+    </objects>
+</document>
